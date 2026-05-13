@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "7267700_document_extension_ext_wma_windows_audio_music_file_format.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "7267700_document_extension_ext_wma_windows_audio_music_file_format 1.svg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "7267700_document_extension_ext_wma_windows_audio_music_file_format 2.svg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

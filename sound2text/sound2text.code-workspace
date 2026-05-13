@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"launch": {
+		"configurations": [
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:sound2text}/sound2text",
+				"name": "Debug sound2text (sound2text/sound2text)",
+				"target": "sound2text",
+				"configuration": "debug",
+				"preLaunchTask": "swift: Build Debug sound2text (sound2text/sound2text)"
+			},
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:sound2text}/sound2text",
+				"name": "Release sound2text (sound2text/sound2text)",
+				"target": "sound2text",
+				"configuration": "release",
+				"preLaunchTask": "swift: Build Release sound2text (sound2text/sound2text)"
+			},
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:sound2text}",
+				"name": "Debug sound2text (sound2text)",
+				"target": "sound2text",
+				"configuration": "debug",
+				"preLaunchTask": "swift: Build Debug sound2text (sound2text)"
+			},
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:sound2text}",
+				"name": "Release sound2text (sound2text)",
+				"target": "sound2text",
+				"configuration": "release",
+				"preLaunchTask": "swift: Build Release sound2text (sound2text)"
+			}
+		]
+	}
+}

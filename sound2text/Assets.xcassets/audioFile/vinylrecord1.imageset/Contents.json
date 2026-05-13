@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "2817111_cassete_newyears_party_vinyl_icon.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "2817111_cassete_newyears_party_vinyl_icon 1.svg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "2817111_cassete_newyears_party_vinyl_icon 2.svg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

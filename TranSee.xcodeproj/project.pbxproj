@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0E87DFA2F67C6A90021566A /* SpeakerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DF92F67C6A90021566A /* SpeakerKit */; };
+		C0E87DFC2F67C6A90021566A /* TTSKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DFB2F67C6A90021566A /* TTSKit */; };
+		C0E87DFE2F67C6A90021566A /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DFD2F67C6A90021566A /* WhisperKit */; };
+		C0E87E032F67C6D10021566A /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87E022F67C6D10021566A /* ArgumentParser */; };
+		C0E87E0E2F67C6E60021566A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87E0D2F67C6E60021566A /* AlertToast */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0DD214C2E5478E100F5AEEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0DD21352E5478E000F5AEEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0DD213C2E5478E000F5AEEC;
+			remoteInfo = sound2text;
+		};
+		C0DD21562E5478E100F5AEEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0DD21352E5478E000F5AEEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0DD213C2E5478E000F5AEEC;
+			remoteInfo = sound2text;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C069DD1B2E8C28DC00B28058 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C0DD213D2E5478E000F5AEEC /* TranSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DD214B2E5478E100F5AEEC /* TranSeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranSeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DD21552E5478E100F5AEEC /* TranSeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranSeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C09E5D742EB4DDAA00814E94 /* Exceptions for "sound2text" folder in "TranSee" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C0DD213C2E5478E000F5AEEC /* TranSee */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C0DD213F2E5478E000F5AEEC /* sound2text */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C09E5D742EB4DDAA00814E94 /* Exceptions for "sound2text" folder in "TranSee" target */,
+			);
+			path = sound2text;
+			sourceTree = "<group>";
+		};
+		C0DD214E2E5478E100F5AEEC /* sound2textTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sound2textTests;
+			sourceTree = "<group>";
+		};
+		C0DD21582E5478E100F5AEEC /* sound2textUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sound2textUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0DD213A2E5478E000F5AEEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E87DFA2F67C6A90021566A /* SpeakerKit in Frameworks */,
+				C0E87DFC2F67C6A90021566A /* TTSKit in Frameworks */,
+				C0E87E032F67C6D10021566A /* ArgumentParser in Frameworks */,
+				C0E87DFE2F67C6A90021566A /* WhisperKit in Frameworks */,
+				C0E87E0E2F67C6E60021566A /* AlertToast in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21482E5478E100F5AEEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21522E5478E100F5AEEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C00F82A82E59E97D002EE77D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0DD21342E5478E000F5AEEC = {
+			isa = PBXGroup;
+			children = (
+				C0DD213F2E5478E000F5AEEC /* sound2text */,
+				C0DD214E2E5478E100F5AEEC /* sound2textTests */,
+				C0DD21582E5478E100F5AEEC /* sound2textUITests */,
+				C00F82A82E59E97D002EE77D /* Frameworks */,
+				C0DD213E2E5478E000F5AEEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0DD213E2E5478E000F5AEEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0DD213D2E5478E000F5AEEC /* TranSee.app */,
+				C0DD214B2E5478E100F5AEEC /* TranSeeTests.xctest */,
+				C0DD21552E5478E100F5AEEC /* TranSeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0DD213C2E5478E000F5AEEC /* TranSee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DD215F2E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSee" */;
+			buildPhases = (
+				C0DD21392E5478E000F5AEEC /* Sources */,
+				C0DD213A2E5478E000F5AEEC /* Frameworks */,
+				C0DD213B2E5478E000F5AEEC /* Resources */,
+				C069DD1B2E8C28DC00B28058 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C0DD213F2E5478E000F5AEEC /* sound2text */,
+			);
+			name = TranSee;
+			packageProductDependencies = (
+				C0E87DF92F67C6A90021566A /* SpeakerKit */,
+				C0E87DFB2F67C6A90021566A /* TTSKit */,
+				C0E87DFD2F67C6A90021566A /* WhisperKit */,
+				C0E87E022F67C6D10021566A /* ArgumentParser */,
+				C0E87E0D2F67C6E60021566A /* AlertToast */,
+			);
+			productName = sound2text;
+			productReference = C0DD213D2E5478E000F5AEEC /* TranSee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0DD214A2E5478E100F5AEEC /* TranSeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DD21622E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSeeTests" */;
+			buildPhases = (
+				C0DD21472E5478E100F5AEEC /* Sources */,
+				C0DD21482E5478E100F5AEEC /* Frameworks */,
+				C0DD21492E5478E100F5AEEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0DD214D2E5478E100F5AEEC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C0DD214E2E5478E100F5AEEC /* sound2textTests */,
+			);
+			name = TranSeeTests;
+			packageProductDependencies = (
+			);
+			productName = sound2textTests;
+			productReference = C0DD214B2E5478E100F5AEEC /* TranSeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0DD21542E5478E100F5AEEC /* TranSeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DD21652E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSeeUITests" */;
+			buildPhases = (
+				C0DD21512E5478E100F5AEEC /* Sources */,
+				C0DD21522E5478E100F5AEEC /* Frameworks */,
+				C0DD21532E5478E100F5AEEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0DD21572E5478E100F5AEEC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C0DD21582E5478E100F5AEEC /* sound2textUITests */,
+			);
+			name = TranSeeUITests;
+			packageProductDependencies = (
+			);
+			productName = sound2textUITests;
+			productReference = C0DD21552E5478E100F5AEEC /* TranSeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0DD21352E5478E000F5AEEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					C0DD213C2E5478E000F5AEEC = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					C0DD214A2E5478E100F5AEEC = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = C0DD213C2E5478E000F5AEEC;
+					};
+					C0DD21542E5478E100F5AEEC = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = C0DD213C2E5478E000F5AEEC;
+					};
+				};
+			};
+			buildConfigurationList = C0DD21382E5478E000F5AEEC /* Build configuration list for PBXProject "TranSee" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				ja,
+				ko,
+				es,
+				de,
+				fr,
+			);
+			mainGroup = C0DD21342E5478E000F5AEEC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */,
+				C0E87E012F67C6D10021566A /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				C0E87E0C2F67C6E60021566A /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C0DD213E2E5478E000F5AEEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0DD213C2E5478E000F5AEEC /* TranSee */,
+				C0DD214A2E5478E100F5AEEC /* TranSeeTests */,
+				C0DD21542E5478E100F5AEEC /* TranSeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0DD213B2E5478E000F5AEEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21492E5478E100F5AEEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21532E5478E100F5AEEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0DD21392E5478E000F5AEEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21472E5478E100F5AEEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DD21512E5478E100F5AEEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0DD214D2E5478E100F5AEEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0DD213C2E5478E000F5AEEC /* TranSee */;
+			targetProxy = C0DD214C2E5478E100F5AEEC /* PBXContainerItemProxy */;
+		};
+		C0DD21572E5478E100F5AEEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0DD213C2E5478E000F5AEEC /* TranSee */;
+			targetProxy = C0DD21562E5478E100F5AEEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C0DD215D2E5478E100F5AEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0DD215E2E5478E100F5AEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C0DD21602E5478E100F5AEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = /Users/gavanwang/applecode/sound2text/sound2text/sound2text.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2605;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readwrite;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sound2text/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "@Copyright 2026, Magpie AI Software";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For real-time speech transcription and recording.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.transee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C0DD21612E5478E100F5AEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = /Users/gavanwang/applecode/sound2text/sound2text/sound2text.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2605;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readwrite;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				"EXCLUDED_ARCHS[sdk=*]" = x86_64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sound2text/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "@Copyright 2026, Magpie AI Software";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For real-time speech transcription and recording.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.transee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C0DD21632E5478E100F5AEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.sound2textTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranSee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TranSee";
+			};
+			name = Debug;
+		};
+		C0DD21642E5478E100F5AEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.sound2textTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranSee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TranSee";
+			};
+			name = Release;
+		};
+		C0DD21662E5478E100F5AEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.sound2textUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = sound2text;
+			};
+			name = Debug;
+		};
+		C0DD21672E5478E100F5AEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = T34FRBNZP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = magpieiot.sound2textUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = sound2text;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0DD21382E5478E000F5AEEC /* Build configuration list for PBXProject "TranSee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD215D2E5478E100F5AEEC /* Debug */,
+				C0DD215E2E5478E100F5AEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DD215F2E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD21602E5478E100F5AEEC /* Debug */,
+				C0DD21612E5478E100F5AEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DD21622E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD21632E5478E100F5AEEC /* Debug */,
+				C0DD21642E5478E100F5AEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DD21652E5478E100F5AEEC /* Build configuration list for PBXNativeTarget "TranSeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD21662E5478E100F5AEEC /* Debug */,
+				C0DD21672E5478E100F5AEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/whisperkit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C0E87E012F67C6D10021566A /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+		C0E87E0C2F67C6E60021566A /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0E87DF92F67C6A90021566A /* SpeakerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */;
+			productName = SpeakerKit;
+		};
+		C0E87DFB2F67C6A90021566A /* TTSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */;
+			productName = TTSKit;
+		};
+		C0E87DFD2F67C6A90021566A /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */;
+			productName = WhisperKit;
+		};
+		C0E87E022F67C6D10021566A /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0E87E012F67C6D10021566A /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		C0E87E0D2F67C6E60021566A /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0E87E0C2F67C6E60021566A /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C0DD21352E5478E000F5AEEC /* Project object */;
+}
