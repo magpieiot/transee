@@ -65,20 +65,47 @@ struct SettingsView: View {
     @State private var selectedCategory: SettingsCategory? = .appearance // 默认选中通用设置
     @EnvironmentObject var whisperService: WhisperService
     @EnvironmentObject var appStateManager: AppStateManager
+    @State private var hostingWindow: NSWindow?
     
     var body: some View {
-        HStack(spacing: 0) {
+        let theme = appStateManager.appTheme
+        let colorScheme = appStateManager.preferredColorScheme
+        print("@@@DEBUG SettingsView body: theme=\(theme.rawValue), colorScheme=\(String(describing: colorScheme))")
+        
+        return HStack(spacing: 0) {
             settingsSideBar()
                 .id("settings-sidebar-\(appStateManager.viewID.uuidString)")
             Divider()
             settingsDetailView()
                 .id("settings-detail-\(appStateManager.viewID.uuidString)")
         }
-        .preferredColorScheme(appStateManager.preferredColorScheme)
+        // 关键：当 appTheme 改变时，强制 SwiftUI 重建整个 HStack 及其子视图。
+        // 这会销毁旧的 Form 和 Picker，并使用最新的 preferredColorScheme 和 window.appearance 重新创建它们。
+        .id(theme)
+        .preferredColorScheme(colorScheme)
         .environment(\.locale, appStateManager.locale)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .frame(minWidth: 900, minHeight: 640)
+        .onAppear {
+            print("@@@DEBUG SettingsView onAppear called, applying appearance")
+            applyWindowAppearanceIfPossible()
+        }
+        .onChange(of: appStateManager.appTheme) { oldTheme, newTheme in
+            print("@@@DEBUG appTheme changed: \(oldTheme.rawValue) -> \(newTheme.rawValue)")
+            applyWindowAppearanceIfPossible()
+        }
+        .onChange(of: appStateManager.preferredColorScheme) { oldCS, newCS in
+            print("@@@DEBUG preferredColorScheme changed: \(String(describing: oldCS)) -> \(String(describing: newCS))")
+        }
+        .onChange(of: appStateManager.viewID) { _, newID in
+            print("@@@DEBUG viewID changed to: \(newID.uuidString)")
+        }
         .background(WindowAccessor { window in
+            if hostingWindow !== window {
+                print("@@@DEBUG WindowAccessor: new window detected, updating hostingWindow")
+                hostingWindow = window
+            }
+            applyWindowAppearanceIfPossible()
             if let delegate = window.delegate as? MyWindowDelegate, delegate.windowTitle == "Settings" { return }
             let delegate = MyWindowDelegate(windowTitle: "Settings", appModel: appModel)
             delegate.onRequestClose = { self.closeModal() }
@@ -143,6 +170,18 @@ struct SettingsView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func applyWindowAppearanceIfPossible() {
+        guard let window = hostingWindow else { return }
+        switch appStateManager.appTheme {
+        case .system:
+            window.appearance = nil
+        case .light:
+            window.appearance = NSAppearance(named: .aqua)
+        case .dark:
+            window.appearance = NSAppearance(named: .darkAqua)
+        }
     }
 }
 
@@ -241,5 +280,4 @@ struct WindowAccessor: NSViewRepresentable {
         .environmentObject(WhisperService())
         .environmentObject(AppStateManager())
 }
-
 

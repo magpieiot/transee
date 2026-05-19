@@ -259,6 +259,16 @@ struct SettingsModelView: View {
             .toast(isPresenting: $isShowAlertToast, duration: 10.0) {
                 AlertToast(displayMode: .alert, type: .regular, title: toastMessage)
             }
+
+            VStack(alignment: .leading) {
+                Toggle(NSLocalizedString("Include Distil Models", comment: "Include Distil Models toggle label"), isOn: $whisperService.settings.includeDistilModel)
+                    .toggleStyle(.switch)  // MacOS风格的开关
+                Text(NSLocalizedString("If enabled, distil models will be included.", comment: "Include Distil Models description"))
+                    .font(.subheadline)
+                    .italic()
+                    .foregroundColor(.secondary)
+            }
+
             /*
             .alert("Toast", isPresented: $isShowAlertToast) {
                 Button("OK") {

@@ -454,11 +454,13 @@ struct MainDetailView: View {
                 case .localfile:
                     ToolbarItem(placement: .status) {
                         MainViewModelStatusBar()
+                            .padding(.horizontal, 16)
                     }
                     
                 case .livemic:
                     ToolbarItem(placement: .status) {
                         MainViewModelStatusBar()
+                        .padding(.horizontal, 16)
                     }
 
                 //case .history:
@@ -523,54 +525,9 @@ struct MainDetailView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    struct MainViewModelStatusBar: View {
-        @EnvironmentObject var whisperService: WhisperService
-        @State private var backgroundColor: Color = .clear
+    
 
-        var body: some View {
-            if whisperService.getSelectedModel() != "" {
-                let selectedLanguage = whisperService.settings.selectedLanguage
-                HStack(alignment: .center) {
-                    if whisperService.modelManager.modelState == .loading {
-                        LoadingRing(size: 14, lineWidth: 4, colors: [.successGreen, .babyBlue])
-                            .padding(.leading, 16.0)
-                    } else {
-                        Circle()
-                            .fill(backgroundColor(for: whisperService.modelManager.modelState))
-                            .frame(width: 14, height: 14)
-                            .padding(.leading, 16.0)
-                    }
-                    Text("\(NSLocalizedString("Model", comment: "Model label")): \(whisperService.getSelectedModel())")  //viewModel.selectedCategory.rawValue)
-                        .font(.headline)
-                        .padding(.horizontal, 16)
-                    
-                     Text("\(NSLocalizedString("Language", comment: "Language label")): \(LanguageWhisperResources.getDisplayString(for: selectedLanguage))")
-                         .font(.headline)
-                         .padding(.horizontal, 16)
-                     
-                     Spacer()
-                 }
-             } else {
-                 Text(NSLocalizedString("No Model Selected", comment: "No model selected message"))
-                     .font(.headline)
-                     .padding(.horizontal, 16)
-             }
-        }
-
-        private func backgroundColor(for modelState: ModelState) -> Color {
-            switch modelState {
-            case .loading, .prewarming, .prewarmed:
-                return .yellow
-            case .loaded:
-                return .successGreen
-            case .downloaded, .downloading:
-                return .babyBlue
-            default:
-                return .clear
-            }
-        }
-    }
-
+    /*
     struct MainViewModelStatusBar2: View {
         @EnvironmentObject var whisperService: WhisperService
         @State private var backgroundColor: Color = .clear
@@ -617,7 +574,51 @@ struct MainDetailView: View {
             }
         }
     }
+    */
 
+}
+
+struct MainViewModelStatusBar: View {
+    @EnvironmentObject var whisperService: WhisperService
+    @State private var backgroundColor: Color = .clear
+
+    var body: some View {
+        if whisperService.getSelectedModel() != "" {
+            let selectedLanguage = whisperService.settings.selectedLanguage
+            HStack(alignment: .center, spacing: 8) {
+                if whisperService.modelManager.modelState == .loading {
+                    LoadingRing(size: 14, lineWidth: 4, colors: [.successGreen, .babyBlue])
+                } else {
+                    Circle()
+                        .fill(backgroundColor(for: whisperService.modelManager.modelState))
+                        .frame(width: 14, height: 14)
+                }
+                
+                Text("\(NSLocalizedString("Model", comment: "Model label")): \(whisperService.getSelectedModel())")
+                    .font(.headline)
+                
+                Text("\(NSLocalizedString("Language", comment: "Language label")): \(LanguageWhisperResources.getDisplayString(for: selectedLanguage))")
+                    .font(.headline)
+                    .padding(.leading, 8)
+            }
+        } else {
+            Text(NSLocalizedString("No Model Selected", comment: "No model selected message"))
+                .font(.headline)
+        }
+    }
+
+    private func backgroundColor(for modelState: ModelState) -> Color {
+        switch modelState {
+        case .loading, .prewarming, .prewarmed:
+            return .yellow
+        case .loaded:
+            return .successGreen
+        case .downloaded, .downloading:
+            return .babyBlue
+        default:
+            return .clear
+        }
+    }
 }
 
 // MARK: - 预览

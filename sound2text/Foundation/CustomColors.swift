@@ -56,11 +56,11 @@ extension Color {
     static let brandButtonBackground = Color(hex: "4A90E2") // Renamed to avoid conflict
 
     // MARK: - Neutral Colors
-    static let lightGrayBackground = Color(hex: "#EBEBEB")
-    static let mediumGrayBackground = Color(hex: "#C0C0C0")
-    static let mainBackground = Color.white
-    static let sidebarBackground = Color(hex: "F8F9FA")
-    static let darkGrayText = Color(hex: "#2D3047")
+    static var lightGrayBackground: Color { Color(nsColor: .controlBackgroundColor) }
+    static var mediumGrayBackground: Color { Color(nsColor: .separatorColor) }
+    static var mainBackground: Color { Color(nsColor: .windowBackgroundColor) }
+    static var sidebarBackground: Color { Color(nsColor: .underPageBackgroundColor) }
+    static var darkGrayText: Color { Color(nsColor: .labelColor) }
     
     // MARK: - Status Colors
     static let successGreen = Color(hex: "629677")
@@ -70,16 +70,16 @@ extension Color {
     static let babyBlue = Color(hex: "88ccf1")
 
     // 文字颜色
-    static let textPrimary = Color(hex: "6B7280")  // 未选中状态
-    static let textSecondary = Color(hex: "374151") // 悬停状态
-    static let textTertiary = Color(hex: "9CA3AF") // 辅助文字
+    static var textPrimary: Color { Color(nsColor: .secondaryLabelColor) }
+    static var textSecondary: Color { Color(nsColor: .labelColor) }
+    static var textTertiary: Color { Color(nsColor: .tertiaryLabelColor) }
     
     // 按钮背景
-    static let buttonBackground = Color(hex: "E5E7EB")
-    static let buttonHover = Color(hex: "D1D5DB")
+    static var buttonBackground: Color { Color(nsColor: .controlBackgroundColor) }
+    static var buttonHover: Color { Color(nsColor: .selectedContentBackgroundColor).opacity(0.35) }
     
     // 状态栏文字
-    static let statusText = Color(hex: "6B7280")
+    static var statusText: Color { Color(nsColor: .secondaryLabelColor) }
     
     // MARK: - Gradients
     static let gradientPink = Color(red: 210, green: 153, blue: 194)

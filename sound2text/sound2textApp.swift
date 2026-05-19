@@ -233,11 +233,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func showSettingsModal() {
-        // 如果窗口已经存在，直接激活并显示
+        // 如果窗口已经存在，直接关闭它。我们每次都创建一个全新窗口，
+        // 以保证 SwiftUI 和 AppKit 层的外观上下文 (Appearance) 被完美且干净地初始化。
         if let window = settingsWindow {
-            window.makeKeyAndOrderFront(nil)
-            NSApp.activate(ignoringOtherApps: true)
-            return
+            window.close()
+            settingsWindow = nil
         }
 
         let hosting = NSHostingController(
@@ -276,6 +276,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.title = "Setting"
         window.isReleasedWhenClosed = false
         window.contentViewController = hosting
+        applyAppearance(to: window)
 
         let desiredFrame = window.frameRect(forContentRect: desiredRect)
         window.setFrame(desiredFrame, display: true)
@@ -284,5 +285,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.activate(ignoringOtherApps: true) // 激活应用程序，确保窗口出现在前端
         window.makeKeyAndOrderFront(nil) // 非模态显示
+    }
+
+    private func applyAppearance(to window: NSWindow) {
+        switch appStateManager.appTheme {
+        case .system:
+            window.appearance = nil
+        case .light:
+            window.appearance = NSAppearance(named: .aqua)
+        case .dark:
+            window.appearance = NSAppearance(named: .darkAqua)
+        }
     }
 }

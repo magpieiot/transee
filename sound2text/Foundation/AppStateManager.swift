@@ -7,6 +7,9 @@
 
 import Foundation
 import SwiftUI
+#if os(macOS)
+import AppKit
+#endif
 
 // 应用状态管理器
 @MainActor
@@ -61,6 +64,16 @@ class AppStateManager: ObservableObject {
         case .dark:
             preferredColorScheme = .dark
         }
+#if os(macOS)
+        switch appTheme {
+        case .system:
+            NSApp.appearance = nil
+        case .light:
+            NSApp.appearance = NSAppearance(named: .aqua)
+        case .dark:
+            NSApp.appearance = NSAppearance(named: .darkAqua)
+        }
+#endif
 
         switch appLanguage {
         case .system:
@@ -81,6 +94,7 @@ class AppStateManager: ObservableObject {
     }
     
     private func updateTheme() async {
+        print("@@@DEBUG updateTheme called, appTheme=\(appTheme.rawValue)")
         // 更新应用主题
         switch appTheme {
         case .system:
@@ -90,6 +104,18 @@ class AppStateManager: ObservableObject {
         case .dark:
             preferredColorScheme = .dark
         }
+#if os(macOS)
+        switch appTheme {
+        case .system:
+            NSApp.appearance = nil
+        case .light:
+            NSApp.appearance = NSAppearance(named: .aqua)
+        case .dark:
+            NSApp.appearance = NSAppearance(named: .darkAqua)
+        }
+#endif
+        
+        print("@@@DEBUG updateTheme: preferredColorScheme now = \(String(describing: preferredColorScheme))")
         
         // 保存设置到 UserDefaults
         UserDefaults.standard.set(appTheme.rawValue, forKey: "appTheme")

@@ -107,92 +107,94 @@ struct WhisperModelInfo: Identifiable, Decodable, Equatable {
 let predefinedModels: [WhisperModelInfo] = [
     WhisperModelInfo(
         name: "openai_whisper-tiny", estimatedDownloadSize: 76.6, estimatedSpeed: 5,
-        estimatedAccuracy: 1, estimatedMemoryGB: 1, description: "最小、最快，准确度一般", trademark: "openai", recommended: false),
+        estimatedAccuracy: 1, estimatedMemoryGB: 1, description: "Minimalist in size, lightning in speed, yet foundational in accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-tiny.en", estimatedDownloadSize: 153, estimatedSpeed: 5,
-        estimatedAccuracy: 1, estimatedMemoryGB: 1, description: "最小、最快，准确度一般", trademark: "openai", recommended: false),
+        estimatedAccuracy: 1, estimatedMemoryGB: 1, description: "Ultra-lean profile, maximum English throughput, and basic transcription clarity.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-base", estimatedDownloadSize: 147, estimatedSpeed: 4,
-        estimatedAccuracy: 2, estimatedMemoryGB: 2, description: "比 tiny 大，准确度更高", trademark: "openai", recommended: false),
+        estimatedAccuracy: 2, estimatedMemoryGB: 2, description: "Compact dimensions, rapid-fire processing, and dependable baseline precision.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-base.en", estimatedDownloadSize: 147, estimatedSpeed: 4,
-        estimatedAccuracy: 2, estimatedMemoryGB: 2, description: "比 base 大，准确度更高", trademark: "openai", recommended: false),
+        estimatedAccuracy: 2, estimatedMemoryGB: 2, description: "Streamlined architecture, swift English response, and consistent entry-level performance.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-small", estimatedDownloadSize: 486, estimatedSpeed: 3,
-        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "中等大小，平衡速度和准确度", trademark: "openai", recommended: true),
+        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "Versatile volume, agile performance, and well-rounded multilingual depth.", trademark: "openai", recommended: true),
     WhisperModelInfo(
         name: "openai_whisper-small_216MB", estimatedDownloadSize: 217, estimatedSpeed: 3,
-        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "中等大小，平衡速度和准确度", trademark: "openai", recommended: false),
+        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "Versatile volume, agile performance, and well-rounded multilingual depth.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-small.en", estimatedDownloadSize: 487, estimatedSpeed: 3,
-        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "中等大小，平衡速度和准确度", trademark: "openai", recommended: false),
+        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "Optimized footprint, responsive output, and high-fidelity English capturing.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-small.en_217MB", estimatedDownloadSize: 218, estimatedSpeed: 3,
-        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "中等大小，平衡速度和准确度", trademark: "openai", recommended: false),
+        estimatedAccuracy: 3, estimatedMemoryGB: 3, description: "Optimized footprint, responsive output, and high-fidelity English capturing.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-medium", estimatedDownloadSize: 1530, estimatedSpeed: 2,
-        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "更大、更慢，准确度较高", trademark: "openai", recommended: true),
+        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Substantial capacity, steady inference, and professional-grade linguistic detail.", trademark: "openai", recommended: true),
     WhisperModelInfo(
         name: "openai_whisper-medium.en", estimatedDownloadSize: 1530, estimatedSpeed: 2,
-        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "更大、更慢，准确度较高", trademark: "openai", recommended: false),
+        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Robust build, focused execution, and superior English transcription accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v2", estimatedDownloadSize: 3090, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v2)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Colossal scale, patient processing, and industry-standard verbatim excellence.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v2_949MB", estimatedDownloadSize: 952, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v2)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Colossal scale, patient processing, and industry-standard verbatim excellence.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v2_turbo", estimatedDownloadSize: 3100, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v2)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v2_turbo_955MB", estimatedDownloadSize: 1050, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v2)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3", estimatedDownloadSize: 3090, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: true),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Premier weight, compute-intensive logic, and the global gold standard for accuracy.", trademark: "openai", recommended: true),
     WhisperModelInfo(
         name: "openai_whisper-large-v3-v20240930", estimatedDownloadSize: 1620, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Premier weight, compute-intensive logic, and the global gold standard for accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3-v20240930_547MB", estimatedDownloadSize: 550,
         estimatedSpeed: 1, estimatedAccuracy: 5, estimatedMemoryGB: 5,
-        description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        description: "Premier weight, compute-intensive logic, and the global gold standard for accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3-v20240930_626MB", estimatedDownloadSize: 627,
         estimatedSpeed: 1, estimatedAccuracy: 5, estimatedMemoryGB: 5,
-        description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        description: "Premier weight, compute-intensive logic, and the global gold standard for accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3-v20240930_turbo", estimatedDownloadSize: 1640,
         estimatedSpeed: 1, estimatedAccuracy: 5, estimatedMemoryGB: 5,
-        description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3-v20240930_turbo_632MB", estimatedDownloadSize: 646,
         estimatedSpeed: 1, estimatedAccuracy: 5, estimatedMemoryGB: 5,
-        description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3_947MB", estimatedDownloadSize: 948, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: false),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Premier weight, compute-intensive logic, and the global gold standard for accuracy.", trademark: "openai", recommended: false),
     WhisperModelInfo(
         name: "openai_whisper-large-v3_turbo", estimatedDownloadSize: 3200, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: true),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: true),
     WhisperModelInfo(
         name: "openai_whisper-large-v3_turbo_954MB", estimatedDownloadSize: 1050, estimatedSpeed: 1,
-        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "最大、最慢，最高准确度 (v3)", trademark: "openai", recommended: true),
+        estimatedAccuracy: 5, estimatedMemoryGB: 5, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "openai", recommended: true),
     WhisperModelInfo(
         name: "distil-whisper_distil-large-v3", estimatedDownloadSize: 1510, estimatedSpeed: 2,
-        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "更大、更慢，准确度较高", trademark: "distil", recommended: false),
+        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "huggingface", recommended: false),
     WhisperModelInfo(
         name: "distil-whisper_distil-large-v3_594MB", estimatedDownloadSize: 595, estimatedSpeed: 2,
-        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "更大、更慢，准确度较高", trademark: "distil", recommended: false),
+        estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "huggingface", recommended: false),
     WhisperModelInfo(
         name: "distil-whisper_distil-large-v3_turbo", estimatedDownloadSize: 1530,
-        estimatedSpeed: 2, estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "更大、更慢，准确度较高", trademark: "distil", recommended: false),
+        estimatedSpeed: 2, estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "huggingface", recommended: false),
     WhisperModelInfo(
         name: "distil-whisper_distil-large-v3_turbo_600MB", estimatedDownloadSize: 607,
-        estimatedSpeed: 2, estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "中等、更慢，准确度较高", trademark: "distil", recommended: false),
+        estimatedSpeed: 2, estimatedAccuracy: 4, estimatedMemoryGB: 4, description: "Refined architecture, accelerated throughput, and the ultimate balance of speed and precision.", trademark: "huggingface", recommended: false),
+    /*
     WhisperModelInfo(
         name: "Apple Speech Recognizer", estimatedDownloadSize: -1,
-        estimatedSpeed: 5, estimatedAccuracy: 3, estimatedMemoryGB: -1, description: "中等、更慢，准确度较高", trademark: "apple", recommended: false),
+        estimatedSpeed: 5, estimatedAccuracy: 3, estimatedMemoryGB: -1, description: "System-native framework, optimized for Apple Silicon.", trademark: "apple", recommended: false),
+    */
 ]
 
 // MARK: - 配置存储 (SettingsStore)
@@ -208,6 +210,11 @@ class SettingsStore: ObservableObject {
         willSet { objectWillChange.send() }
     }
 
+    // 是否追加 distil 模型目录
+    @AppStorage("includeDistilModel") var includeDistilModel: Bool = false {
+        willSet { objectWillChange.send() }
+    }
+    
     // 用户手动选择的语言
     @AppStorage("selectedLanguage") var selectedLanguage: String = "" {
         willSet { objectWillChange.send() }
@@ -398,7 +405,8 @@ final class ModelManager: ObservableObject, @unchecked Sendable {
                     }
                 }
             }
-            self.localModels = newLocalModels.filter { $0.contains("openai") }
+            //self.localModels = newLocalModels.filter { $0.contains("openai") }
+            self.localModels = newLocalModels
             print("@@@DEBUG: Discovered Local Models: \(self.localModels)")
         } catch {
             print("枚举本地模型时出错: \(error.localizedDescription)")
@@ -430,7 +438,13 @@ final class ModelManager: ObservableObject, @unchecked Sendable {
             }
             
             // 确保 availableModels 包含所有符合条件的预定义模型
-            var allModels = predefinedModels.map { $0.name }.filter { $0.contains("openai") }
+            // 是否追加 distil 模型目录
+            var allModels: [String] = []
+            if SettingsStore().includeDistilModel {
+                allModels = predefinedModels.map { $0.name }
+            } else {
+                allModels = predefinedModels.map { $0.name }.filter { $0.contains("openai") }
+            }
             
             // 如果有本地模型不在预定义列表中，也加上
             for model in self.localModels where !allModels.contains(model) {
@@ -617,6 +631,10 @@ final class ModelManager: ObservableObject, @unchecked Sendable {
                 let modelName = item.lastPathComponent
                 // 仅保留含 openai 的目录
                 if modelName.contains("openai") {
+                    foundModels.append(modelName)
+                }
+                // 是否追加 distil 模型目录
+                if modelName.contains("distil") {
                     foundModels.append(modelName)
                 }
             }
