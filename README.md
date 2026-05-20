@@ -33,7 +33,7 @@ Transee supports the full range of Whisper model sizes (Tiny, Base, Small, Mediu
 ### 2. Multi-Format Transcription
 Transcribe audio and video files into various formats tailored for your needs:
 - **Plain Text (.txt):** For quick notes and documentation.
-- **Subtitles (.srt, .vtt):** Perfectly timed captions for video editors and content creators.
+- **Subtitles (.srt):** Perfectly timed captions for video editors and content creators.
 - **Rich JSON:** For developers who want to integrate the output into other workflows.
 
 ### 3. Real-time Live Captions
@@ -45,7 +45,6 @@ Whisper is trained on 680,000 hours of multilingual and multitask supervised dat
 ### 5. Intuitive UX/UI
 - **Drag & Drop:** Simply drop your media files into the app to start transcribing.
 - **Batch Processing:** Handle multiple files simultaneously to save time.
-- **System Integration:** Global hotkeys and Menu Bar support for instant access.
 
 ---
 
@@ -74,7 +73,7 @@ git clone https://github.com/magpieiot/transee.git
 cd transee
 open Transee.xcodeproj
 ```
-*Note: You will need Xcode 15.0+ and macOS 13.0+.*
+*Note: You will need Xcode 15.0+ and macOS 15.0+.*
 
 ---
 
