@@ -95,6 +95,14 @@ Privacy isn't a feature; it's our foundation.
 
 ---
 
+## 🙏 Acknowledgements
+Transee is built upon the incredible work of the open-source AI community:
+
+**WhisperKit: Special thanks to the team at Argmax for providing the high-performance Core ML implementation of Whisper that powers this app.
+**OpenAI Whisper: For the original model weights and groundbreaking research in ASR.
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions from the community! Whether it’s fixing a bug, adding a new language, or improving the UI, your help makes Transee better for everyone.
