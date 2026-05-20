@@ -5,8 +5,8 @@ This is a comprehensive, professional, and developer-friendly **README.md** writ
 # Transee: High-Performance, Privacy-First ASR for macOS
 
 ![License](https://img.shields.io/github/license/magpieiot/transee)
-![Platform](https://img.shields.io/badge/platform-macOS%2013.0+-blue)
-![Swift](https://img.shields.io/badge/Swift-5.9+-orange)
+![Platform](https://img.shields.io/badge/platform-macOS%2015.0+-blue)
+![Swift](https://img.shields.io/badge/Swift-6.3+-orange)
 
 **Transee** is an open-source, professional-grade Automatic Speech Recognition (ASR) application built exclusively for macOS. Powered by OpenAI’s revolutionary **Whisper** models, Transee brings industry-leading transcription accuracy directly to your desktop—without ever sending a single byte of data to the cloud.
 
