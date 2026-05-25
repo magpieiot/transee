@@ -1,16 +1,12 @@
-This is a comprehensive, professional, and developer-friendly **README.md** written in English. It is designed to attract both users and contributors on GitHub, emphasizing the technical strengths and the privacy-first nature of your app.
-
----
-
 # Transee: High-Performance, Privacy-First ASR for macOS
 
 ![License](https://img.shields.io/github/license/magpieiot/transee)
 ![Platform](https://img.shields.io/badge/platform-macOS%2015.0+-blue)
 ![Swift](https://img.shields.io/badge/Swift-6.3+-orange)
 
-**Transee** is an open-source, professional-grade Automatic Speech Recognition (ASR) application built exclusively for macOS. Powered by OpenAI’s revolutionary **Whisper** models, Transee brings industry-leading transcription accuracy directly to your desktop—without ever sending a single byte of data to the cloud.
+**Transee** is an open-source, automatic Speech Recognition (ASR) application built exclusively for macOS. Powered by OpenAI’s revolutionary **Whisper** models, Transee brings industry-leading transcription accuracy directly to your desktop—without ever sending a single byte of data to the cloud.
 
-In an era where voice data is often treated as a commodity by large corporations, Transee stands for a different philosophy: **Your voice is your own.** By leveraging the power of Apple Silicon, Transee provides a seamless, local, and lightning-fast transcription experience that respects your privacy and your workflow.
+In an era where voice data is often treated as a commodity by large corporations, Transee stands for a different philosophy: **Your voice is your own.** By leveraging the power of Apple Silicon, Transee provides a seamless, local, and lightning-fast transcription experience that respects your privacy.
 
 ---
 
@@ -19,7 +15,7 @@ In an era where voice data is often treated as a commodity by large corporations
 Most transcription services today are cloud-based, requiring expensive subscriptions and raising significant privacy concerns. For researchers, journalists, developers, and creators, the choice is often between "free but insecure" or "secure but expensive."
 
 Transee breaks this trade-off. It is:
-- **100% Local:** All processing happens on your device. No API keys, no internet connection required, and no hidden data logging.
+- **100% Local:** All processing happens on your Mac. No API keys, no internet connection required, and no hidden data logging.
 - **Native Experience:** Built with SwiftUI for a sleek, modern, and lightweight macOS experience.
 - **Optimized Performance:** Optimized for Apple Silicon (M1/M2/M3) using Core ML and Metal to ensure minimal battery drain and maximum speed.
 
@@ -36,8 +32,8 @@ Transcribe audio and video files into various formats tailored for your needs:
 - **Subtitles (.srt):** Perfectly timed captions for video editors and content creators.
 - **Rich JSON:** For developers who want to integrate the output into other workflows.
 
-### 3. Real-time Live Captions
-Don't just transcribe files—capture live audio from your microphone. Perfect for meetings, lectures, or live-coding sessions. Transee handles real-time inference with minimal latency.
+### 3. Real-time Live Review
+Not only can you preview the transcription results in real-time when transcribing files, but you can also capture live audio from your microphone. It is perfect for meetings, lectures, or live coding sessions.
 
 ### 4. Advanced Multilingual Support
 Whisper is trained on 680,000 hours of multilingual and multitask supervised data. Transee inherits this power, allowing you to transcribe and translate over 90 languages with high robustness to accents and background noise.
