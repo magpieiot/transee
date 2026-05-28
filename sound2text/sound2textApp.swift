@@ -16,7 +16,7 @@ import Combine
 @main
 struct tarnseeApp: App {
     @StateObject var appModel = AppStateModel()
-    @StateObject var whisperService: WhisperService = WhisperService()
+    @StateObject var whisperService: TranscriptionService = TranscriptionService()
     @StateObject var permissionManager: PermissionManager = PermissionManager.shared
     @StateObject var appStateManager: AppStateManager = AppStateManager()
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -180,7 +180,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // 使用一个 `@Published` 属性来观察 appModel，或者直接通过一个弱引用来避免循环引用
     // 如果 AppStateModel 在整个 App 生命周期中都存在，强引用也无妨
     var appStateModel: AppStateModel! // 在 setup() 中注入
-    var whisperService: WhisperService! // 新增属性，用于存储 WhisperService 实例
+    var whisperService: TranscriptionService! // 新增属性，用于存储 TranscriptionService 实例
     var appStateManager: AppStateManager!
     var settingsWindow: NSWindow? // 用于保持设置窗口的单例引用
     
@@ -191,9 +191,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print("AppDelegate default init called.")
     }
     // 这是一个可以在外部调用的方法，用于设置 appStateModel
-    func setup(with appModel: AppStateModel, whisperService: WhisperService, appStateManager: AppStateManager) {
+    func setup(with appModel: AppStateModel, whisperService: TranscriptionService, appStateManager: AppStateManager) {
         self.appStateModel = appModel
-        self.whisperService = whisperService // 存储 WhisperService 实例
+        self.whisperService = whisperService // 存储 TranscriptionService 实例
         self.appStateManager = appStateManager
         print("AppDelegate setup with AppStateModel complete.")
     }

@@ -22,7 +22,7 @@ struct FileInformationBar: View {
     //@State private var sampleRate: Double = 0.0
     @State private var progress: Double = 0.0
     @EnvironmentObject var audioPlayer: AudioPlayerManager
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     //@Environment(\.openWindow) var openWindow
     
     var body: some View {

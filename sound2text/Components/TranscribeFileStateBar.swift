@@ -2,7 +2,7 @@ import SwiftUI
 /*
 struct TranscribeFileStateBar: View {
     let fileData: SelectedAudioFile
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @Binding var isTranscribing: Bool
     
     @State private var isSpinning = false

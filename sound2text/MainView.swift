@@ -139,7 +139,7 @@ struct MainView: View {
     @StateObject var audioPlayer = AudioPlayerManager()
     @StateObject var viewModel = MainViewModel()
     @StateObject var historyManager = HistoryManager()
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @EnvironmentObject var permissionManager: PermissionManager
     @EnvironmentObject var appStateManager: AppStateManager
     @AppStorage("exportPath") var exportPath: String = ""
@@ -358,7 +358,7 @@ class MainViewModel: ObservableObject {
 // MARK: - 侧边栏视图
 struct MainSideBarView: View {
     @ObservedObject var viewModel: MainViewModel
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -422,7 +422,7 @@ struct MainSideBarView: View {
 
 struct MainDetailView: View {
     @ObservedObject var viewModel: MainViewModel
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
 
     var body: some View {
         ZStack {
@@ -529,7 +529,7 @@ struct MainDetailView: View {
 
     /*
     struct MainViewModelStatusBar2: View {
-        @EnvironmentObject var whisperService: WhisperService
+        @EnvironmentObject var whisperService: TranscriptionService
         @State private var backgroundColor: Color = .clear
 
         var body: some View {
@@ -579,7 +579,7 @@ struct MainDetailView: View {
 }
 
 struct MainViewModelStatusBar: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @State private var backgroundColor: Color = .clear
 
     var body: some View {
@@ -625,10 +625,10 @@ struct MainViewModelStatusBar: View {
 #Preview {
     MainView()
         .frame(width: 1200, height: 600)
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
 }
 
 #Preview {
     MainSideBarView(viewModel: MainViewModel())
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
 }

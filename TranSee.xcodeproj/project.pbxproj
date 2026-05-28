@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0039DF02FC6DEA80062632B /* AudioCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DEF2FC6DEA80062632B /* AudioCommon */; };
+		C0039DF22FC6DEA80062632B /* NemotronStreamingASR in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DF12FC6DEA80062632B /* NemotronStreamingASR */; };
+		C0039DF42FC6DEA80062632B /* OmnilingualASR in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DF32FC6DEA80062632B /* OmnilingualASR */; };
+		C0039DF62FC6DEA80062632B /* ParakeetASR in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DF52FC6DEA80062632B /* ParakeetASR */; };
+		C0039DF82FC6DEA80062632B /* ParakeetStreamingASR in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DF72FC6DEA80062632B /* ParakeetStreamingASR */; };
+		C0039DFA2FC6DEA80062632B /* Qwen3ASR in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DF92FC6DEA80062632B /* Qwen3ASR */; };
+		C0039DFC2FC6DEA80062632B /* SourceSeparation in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DFB2FC6DEA80062632B /* SourceSeparation */; };
+		C0039DFE2FC6DEA80062632B /* SpeechCore in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DFD2FC6DEA80062632B /* SpeechCore */; };
+		C0039E002FC6DEA80062632B /* SpeechEnhancement in Frameworks */ = {isa = PBXBuildFile; productRef = C0039DFF2FC6DEA80062632B /* SpeechEnhancement */; };
+		C0039E022FC6DEA80062632B /* SpeechUI in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E012FC6DEA80062632B /* SpeechUI */; };
+		C0039E042FC6DEA80062632B /* SpeechVAD in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E032FC6DEA80062632B /* SpeechVAD */; };
+		C0039E062FC6DEA80062632B /* audio in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E052FC6DEA80062632B /* audio */; };
+		C0039E082FC6DEA80062632B /* audio-server in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E072FC6DEA80062632B /* audio-server */; };
+		C0039E0A2FC6DEA80062632B /* speech in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E092FC6DEA80062632B /* speech */; };
+		C0039E0C2FC6DEA80062632B /* speech-server in Frameworks */ = {isa = PBXBuildFile; productRef = C0039E0B2FC6DEA80062632B /* speech-server */; };
 		C0E87DFA2F67C6A90021566A /* SpeakerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DF92F67C6A90021566A /* SpeakerKit */; };
 		C0E87DFC2F67C6A90021566A /* TTSKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DFB2F67C6A90021566A /* TTSKit */; };
 		C0E87DFE2F67C6A90021566A /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0E87DFD2F67C6A90021566A /* WhisperKit */; };
@@ -86,9 +101,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0039DF02FC6DEA80062632B /* AudioCommon in Frameworks */,
 				C0E87DFA2F67C6A90021566A /* SpeakerKit in Frameworks */,
+				C0039DF22FC6DEA80062632B /* NemotronStreamingASR in Frameworks */,
+				C0039DF82FC6DEA80062632B /* ParakeetStreamingASR in Frameworks */,
+				C0039DF42FC6DEA80062632B /* OmnilingualASR in Frameworks */,
+				C0039E0C2FC6DEA80062632B /* speech-server in Frameworks */,
 				C0E87DFC2F67C6A90021566A /* TTSKit in Frameworks */,
+				C0039E022FC6DEA80062632B /* SpeechUI in Frameworks */,
+				C0039E062FC6DEA80062632B /* audio in Frameworks */,
 				C0E87E032F67C6D10021566A /* ArgumentParser in Frameworks */,
+				C0039DFC2FC6DEA80062632B /* SourceSeparation in Frameworks */,
+				C0039E082FC6DEA80062632B /* audio-server in Frameworks */,
+				C0039DFE2FC6DEA80062632B /* SpeechCore in Frameworks */,
+				C0039E002FC6DEA80062632B /* SpeechEnhancement in Frameworks */,
+				C0039DF62FC6DEA80062632B /* ParakeetASR in Frameworks */,
+				C0039E042FC6DEA80062632B /* SpeechVAD in Frameworks */,
+				C0039E0A2FC6DEA80062632B /* speech in Frameworks */,
+				C0039DFA2FC6DEA80062632B /* Qwen3ASR in Frameworks */,
 				C0E87DFE2F67C6A90021566A /* WhisperKit in Frameworks */,
 				C0E87E0E2F67C6E60021566A /* AlertToast in Frameworks */,
 			);
@@ -165,6 +195,21 @@
 				C0E87DFD2F67C6A90021566A /* WhisperKit */,
 				C0E87E022F67C6D10021566A /* ArgumentParser */,
 				C0E87E0D2F67C6E60021566A /* AlertToast */,
+				C0039DEF2FC6DEA80062632B /* AudioCommon */,
+				C0039DF12FC6DEA80062632B /* NemotronStreamingASR */,
+				C0039DF32FC6DEA80062632B /* OmnilingualASR */,
+				C0039DF52FC6DEA80062632B /* ParakeetASR */,
+				C0039DF72FC6DEA80062632B /* ParakeetStreamingASR */,
+				C0039DF92FC6DEA80062632B /* Qwen3ASR */,
+				C0039DFB2FC6DEA80062632B /* SourceSeparation */,
+				C0039DFD2FC6DEA80062632B /* SpeechCore */,
+				C0039DFF2FC6DEA80062632B /* SpeechEnhancement */,
+				C0039E012FC6DEA80062632B /* SpeechUI */,
+				C0039E032FC6DEA80062632B /* SpeechVAD */,
+				C0039E052FC6DEA80062632B /* audio */,
+				C0039E072FC6DEA80062632B /* audio-server */,
+				C0039E092FC6DEA80062632B /* speech */,
+				C0039E0B2FC6DEA80062632B /* speech-server */,
 			);
 			productName = sound2text;
 			productReference = C0DD213D2E5478E000F5AEEC /* TranSee.app */;
@@ -258,6 +303,7 @@
 				C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */,
 				C0E87E012F67C6D10021566A /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 				C0E87E0C2F67C6E60021566A /* XCRemoteSwiftPackageReference "AlertToast" */,
+				C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C0DD213E2E5478E000F5AEEC /* Products */;
@@ -672,6 +718,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soniqo/speech-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/argmaxinc/whisperkit";
@@ -699,6 +753,81 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C0039DEF2FC6DEA80062632B /* AudioCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = AudioCommon;
+		};
+		C0039DF12FC6DEA80062632B /* NemotronStreamingASR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = NemotronStreamingASR;
+		};
+		C0039DF32FC6DEA80062632B /* OmnilingualASR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = OmnilingualASR;
+		};
+		C0039DF52FC6DEA80062632B /* ParakeetASR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = ParakeetASR;
+		};
+		C0039DF72FC6DEA80062632B /* ParakeetStreamingASR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = ParakeetStreamingASR;
+		};
+		C0039DF92FC6DEA80062632B /* Qwen3ASR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = Qwen3ASR;
+		};
+		C0039DFB2FC6DEA80062632B /* SourceSeparation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = SourceSeparation;
+		};
+		C0039DFD2FC6DEA80062632B /* SpeechCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = SpeechCore;
+		};
+		C0039DFF2FC6DEA80062632B /* SpeechEnhancement */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = SpeechEnhancement;
+		};
+		C0039E012FC6DEA80062632B /* SpeechUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = SpeechUI;
+		};
+		C0039E032FC6DEA80062632B /* SpeechVAD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = SpeechVAD;
+		};
+		C0039E052FC6DEA80062632B /* audio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = audio;
+		};
+		C0039E072FC6DEA80062632B /* audio-server */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = "audio-server";
+		};
+		C0039E092FC6DEA80062632B /* speech */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = speech;
+		};
+		C0039E0B2FC6DEA80062632B /* speech-server */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0039DEE2FC6DEA80062632B /* XCRemoteSwiftPackageReference "speech-swift" */;
+			productName = "speech-server";
+		};
 		C0E87DF92F67C6A90021566A /* SpeakerKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0E87DF82F67C6A90021566A /* XCRemoteSwiftPackageReference "whisperkit" */;

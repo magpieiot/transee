@@ -50,8 +50,8 @@ struct TranscribeliveView: View {
 
     @State private var audioInputDeviceManager = AudioInputDeviceManager()
     
-    // 暂时注释掉，等 WhisperService 定义好后再启用
-    @EnvironmentObject var whisperService: WhisperService
+    // 暂时注释掉，等 TranscriptionService 定义好后再启用
+    @EnvironmentObject var whisperService: TranscriptionService
     @EnvironmentObject var historyManager: HistoryManager
     
     var body: some View {
@@ -618,5 +618,5 @@ struct TranscribeliveView: View {
 // MARK: - 辅助视图：麦克风指示器
 #Preview {
     TranscribeliveView(viewModel: MainViewModel())
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
 }

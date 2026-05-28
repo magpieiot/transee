@@ -26,7 +26,7 @@ enum OnboardingStep: Int, CaseIterable {
 }
 
 struct OnboardingView: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @EnvironmentObject var permissionManager: PermissionManager
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @AppStorage("selectedModel") private var selectedModelStorage: String = ""

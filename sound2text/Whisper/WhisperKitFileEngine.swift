@@ -1,5 +1,5 @@
 //
-//  FileTranscriptionEngine.swift
+//  WhisperKitFileEngine.swift
 //  transee
 //
 //  Created by gavanwang on 2026/2/13.
@@ -13,17 +13,20 @@ import Combine
 // MARK: - 转写引擎 (TranscriptionEngine)
 // 负责处理音频转写任务、管理转写状态和结果
 @MainActor
-class FileTranscriptionEngine: ObservableObject, @unchecked Sendable {
+class WhisperKitFileEngine: FileTranscriptionProvider, @unchecked Sendable {
     @Published var isTranscribing = false  // 是否正在转写
     @Published var isRecording: Bool = false  // 是否正在录音
     @Published var currentText = ""
     @Published var confirmedText: String = ""  // 已确认的文本
-    @Published var confirmedSegments: [TranscriptionSegment] = []
+    @Published var confirmedSegments: [AppTranscriptionSegment] = []
     // 新增：转写计时器时长
     @Published var duration: Double = 0.0
     // 用于存储转录进度的属性
     @Published var transcriptionProgress: Double = 0.0
     @Published var isMuted: Bool = false  // 是否静音
+    
+    // WhisperKit instance injected by TranscriptionService
+    var whisperKit: WhisperKit?
 
     /// 实时转写过程中，按“窗口 ID → (该窗口已产生的文本数组, 累计回退次数)”形式缓存各音频块信息
     /// - key (Int): WhisperKit 每次滑动窗口给出的 windowId，代表当前正在处理的音频块序号
@@ -96,12 +99,14 @@ class FileTranscriptionEngine: ObservableObject, @unchecked Sendable {
         transcribeTimer = nil  // 最佳实践是将其置为 nil
     }
 
-    func resetState(whisperKit: WhisperKit, settings: SettingsStore) {
+    func resetState() {
         print("resetState: 清空 currentChunks 之前 count=\(currentChunks.count)")
         transcribeTask?.cancel()
         isRecording = false
         isTranscribing = false
-        whisperKit.audioProcessor.stopRecording()
+        if let audioProcessor = whisperKit?.audioProcessor as? AudioProcessor {
+            audioProcessor.stopRecording()
+        }
         currentText = ""
         currentChunks = [:]
         confirmedSegments = []
@@ -129,10 +134,11 @@ class FileTranscriptionEngine: ObservableObject, @unchecked Sendable {
 
     /// 转写音频文件
     /// - Parameter path: 音频文件路径
-    func transcribeFile(at file: SelectedAudioFile, whisperKit: WhisperKit, settings: SettingsStore) {
+    func transcribeFile(at file: SelectedAudioFile, settings: SettingsStore) {
         // 重置状态
-        resetState(whisperKit: whisperKit, settings: settings)
+        resetState()
         transcriptionProgress = 0.0
+        guard let whisperKit = self.whisperKit else { return }
         // 初始化音频处理器
         whisperKit.audioProcessor = AudioProcessor()
         // 创建转写任务
@@ -253,7 +259,13 @@ class FileTranscriptionEngine: ObservableObject, @unchecked Sendable {
         currentLag = transcription?.timings.decodingLoop ?? 0
         */
         // 更新已确认的片段
-        confirmedSegments = segments
+        confirmedSegments = segments.map { segment in
+            AppTranscriptionSegment(
+                start: Double(segment.start),
+                end: Double(segment.end),
+                text: segment.text
+            )
+        }
         print("@@@DEBUG: 更新已确认的片段数: \(confirmedSegments.count)")
         //}
     }
@@ -352,7 +364,13 @@ class FileTranscriptionEngine: ObservableObject, @unchecked Sendable {
         currentLag = transcription?.timings.decodingLoop ?? 0
         */
         // 更新已确认的片段
-        confirmedSegments = segments
+        confirmedSegments = segments.map { segment in
+            AppTranscriptionSegment(
+                start: Double(segment.start),
+                end: Double(segment.end),
+                text: segment.text
+            )
+        }
         print("@@@DEBUG: 更新已确认的片段数: \(confirmedSegments.count)")
         //}
     }

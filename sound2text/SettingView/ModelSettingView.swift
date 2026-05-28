@@ -13,7 +13,7 @@ struct ModelSettingView: View {
     @State var downloadingModel: String = ""
     @State private var interactingModel: String? // 用于记录当前正在交互（右键菜单弹出）的模型
     @State private var isShowDeleteButton = false // 用于控制删除按钮的显示
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
 
     private var downloadedModels: [String] {
         whisperService.modelManager.localModels
@@ -131,7 +131,7 @@ struct ModelSettingView: View {
 }
 
 struct ModelSectionHeader: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
 
     let title: String
     var body: some View {
@@ -155,7 +155,7 @@ struct ModelInfomationBar: View {
     @State private var isSpinning: Bool = false
 
     var modelName: String
-    //@EnvironmentObject var whisperService: WhisperService
+    //@EnvironmentObject var whisperService: TranscriptionService
     // 接收需要的对象
     @ObservedObject var modelManager: ModelManager
     @ObservedObject var settings: SettingsStore
@@ -438,6 +438,6 @@ struct MacOSSettingsGroupBoxStyle: GroupBoxStyle {
 
 #Preview {
     ModelSettingView()
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
 }
 

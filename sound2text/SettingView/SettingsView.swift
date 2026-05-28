@@ -63,7 +63,7 @@ enum SettingsCategory: String, CaseIterable, Identifiable {
 struct SettingsView: View {
     @ObservedObject var appModel: AppStateModel
     @State private var selectedCategory: SettingsCategory? = .appearance // 默认选中通用设置
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @EnvironmentObject var appStateManager: AppStateManager
     @State private var hostingWindow: NSWindow?
     
@@ -207,7 +207,7 @@ struct SettingsSidebar: View {
 
 // 详细设置视图
 struct SettingsDetailView: View {
-    // @ObservedObject var whisperService: WhisperService
+    // @ObservedObject var whisperService: TranscriptionService
     let selectedCategory: SettingsCategory?
 
     var body: some View {
@@ -277,7 +277,7 @@ struct WindowAccessor: NSViewRepresentable {
 
 #Preview {
     SettingsView(appModel: AppStateModel() )
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
         .environmentObject(AppStateManager())
 }
 

@@ -1,19 +1,19 @@
 //
-//  WhisperService.swift
+//  TranscriptionService.swift
 //  sound2text
 //
 //  Created by gavanwang on 8/22/25.
 //
 
 //
-//  WhisperService.swift
+//  TranscriptionService.swift
 //  sound2text
 //
 //  Created by gavanwang on 8/22/25.
 //
 
 //
-//  WhisperService.swift
+//  TranscriptionService.swift
 //  sound2text
 //
 //  Created by gavanwang on 8/22/25.
@@ -707,36 +707,34 @@ final class ModelManager: ObservableObject, @unchecked Sendable {
     }
 }
 
-// MARK: - 主服务外观 (WhisperService)
+// MARK: - 主服务外观 (TranscriptionService)
 // 作为主外观，提供对所有服务的统一访问点
 @MainActor
-class WhisperService: ObservableObject {
+class TranscriptionService: ObservableObject {
     @Published var settings: SettingsStore
     @Published var modelManager: ModelManager
-    @Published var transcriptionEngine: FileTranscriptionEngine
-    @Published var liveTranscriptionEngine: LiveTranscriptionEngine
+    
+    @Published var transcriptionEngine: WhisperKitFileEngine
+    @Published var liveTranscriptionEngine: WhisperKitLiveEngine
+    
+    let audioManager = AudioCaptureManager()
 
     // 用于存储订阅的取消令牌
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        //let settings = SettingsStore()
-        //let modelManager = ModelManager()
-        //let transcriptionEngine = TranscriptionEngine()
-        //let liveTranscriptionEngine = LiveTranscriptionEngine()
-
         self.settings = SettingsStore()
         self.modelManager = ModelManager()
-        self.transcriptionEngine = FileTranscriptionEngine()
-        self.liveTranscriptionEngine = LiveTranscriptionEngine()
+        
+        let fileEngine = WhisperKitFileEngine()
+        let liveEngine = WhisperKitLiveEngine()
+        liveEngine.audioManager = self.audioManager
+        
+        self.transcriptionEngine = fileEngine
+        self.liveTranscriptionEngine = liveEngine
         
         // 设置变化通知转发
         setupChangeForwarding()
-        //Task {
-            //print("@@@DEBUG: WhisperService init & loadSelectedModel")
-        //    print("@@@DEBUG: WhisperService init & loadSelectedModel, settings.defaultModel: \(settings.defaultModel)")
-            //await self.loadSelectedModel()
-        //}
     }
 
     // 设置子对象变化通知的转发
@@ -797,10 +795,11 @@ class WhisperService: ObservableObject {
             transcriptionEngine.currentText = "模型未加载。请先选择并加载一个模型。"
             return
         }
+        transcriptionEngine.whisperKit = whisperKit
         // 初始化转写引擎
-        transcriptionEngine.resetState(whisperKit: whisperKit, settings: settings)
+        transcriptionEngine.resetState()
         // 等待转写完成
-        transcriptionEngine.transcribeFile(at: file, whisperKit: whisperKit, settings: settings)
+        transcriptionEngine.transcribeFile(at: file, settings: settings)
         //print("transcriptionEngine.currentText: \(transcriptionEngine.currentText)")
     }
 
@@ -808,13 +807,14 @@ class WhisperService: ObservableObject {
     func transcribeLiveMic() async {
 
         guard let whisperKit = modelManager.getWhisperKit() else { return }
-        liveTranscriptionEngine.startRecording(true, whisperKit: whisperKit, settings: settings)
+        liveTranscriptionEngine.whisperKit = whisperKit
+        await liveTranscriptionEngine.startRecording(loop: true, settings: settings, recordingFileURL: nil)
     }
 
     // 停止实时转写
     func stopLiveTranscribing() async {
-        guard let whisperKit = modelManager.getWhisperKit() else { return }
-        liveTranscriptionEngine.stopRecording(true, whisperKit: whisperKit, settings: settings)
+        guard modelManager.getWhisperKit() != nil else { return }
+        await liveTranscriptionEngine.stopRecording(loop: true, settings: settings)
     }
 
     // 重置转写状态

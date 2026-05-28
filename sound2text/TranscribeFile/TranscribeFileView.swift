@@ -63,7 +63,7 @@ struct TranscribeFileView: View {
     @AppStorage("exportPath") var exportPath: String = ""
     @AppStorage("exportFormat") var exportFormat: ExportFormat = ExportFormat.txt
 
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @EnvironmentObject var audioPlayer: AudioPlayerManager
     @EnvironmentObject var historyManager: HistoryManager
 
@@ -392,7 +392,7 @@ struct TranscribeFileView: View {
 
     struct TranscribeFileStateBar: View {
         let fileData: SelectedAudioFile
-        @EnvironmentObject var whisperService: WhisperService
+        @EnvironmentObject var whisperService: TranscriptionService
         @Binding var isTranscribing: Bool
         @State private var isSpinning = false
 

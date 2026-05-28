@@ -73,7 +73,7 @@ struct SettingsAppearanceView: View {
 }
 
 struct SettingsPromptView: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @State private var isPromptExpanded: Bool = false
     @State private var isShowAddPromptDialog: Bool = false
     @State private var isShowEditPromptDialog: Bool = false
@@ -217,7 +217,7 @@ struct SettingsPromptView: View {
 }
 
 struct SettingsModelView: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
 
     @State private var isEditingRepoName: Bool = false
     @State private var isPromptExpanded: Bool = false
@@ -430,7 +430,7 @@ struct SettingsAudioView: View {
 }
 
 struct SettingsExportView: View {
-    //@EnvironmentObject var whisperService: WhisperService
+    //@EnvironmentObject var whisperService: TranscriptionService
     @AppStorage("exportFormat") private var exportFormat: ExportFormat = ExportFormat.txt
     @AppStorage("exportPath") private var exportPath: String = ""
 
@@ -487,7 +487,7 @@ struct SettingsExportView: View {
 }
 
 struct SettingsAboutView: View {
-    @EnvironmentObject var whisperService: WhisperService
+    @EnvironmentObject var whisperService: TranscriptionService
     @State private var showHiddenSettings = false
     @State private var copyrightTapCount = 0
 
@@ -534,12 +534,16 @@ struct SettingsAboutView: View {
                 .buttonStyle(.plain)
             }
 
-            if let url = URL(string: "https://www.magpieai.app/user-agreement") {
+            if let url = URL(string: "https://github.com/magpieiot/transee/blob/main/LICENSE") {
                 Link(NSLocalizedString("Open Source License", comment: "Open source license link of third party"), destination: url)
             }
 
-            if let url = URL(string: "https://www.magpieai.app/user-agreement") {
-                Link(NSLocalizedString("Terms of Service and Privacy Policy", comment: "Terms of service and privacy policy link"), destination: url)
+            if let url = URL(string: "https://www.magpieai.app/terms?lang=en") {
+                Link(NSLocalizedString("Terms of Service", comment: "Terms of service link"), destination: url)
+            }
+
+            if let url = URL(string: "https://www.magpieai.app/privacy?lang=en") {
+                Link(NSLocalizedString("Privacy Policy", comment: "Privacy policy link"), destination: url)
             }
 
             if let url = URL(string: "mailto:magpieiot@gmail.com") {
@@ -637,7 +641,7 @@ struct SettingsAboutView: View {
 
 #Preview {
     SettingsModelView()
-        .environmentObject(WhisperService())
+        .environmentObject(TranscriptionService())
 }
 
 #Preview {
